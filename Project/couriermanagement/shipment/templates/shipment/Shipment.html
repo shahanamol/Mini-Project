@@ -1,0 +1,61 @@
+{% extends 'temp/branch.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DETAILS</title>
+</head>
+<body>
+	<center><h1>SHIPMENT</h1></center>
+	<form method="post">
+	<table align="center">
+        {% csrf_token %}
+		<tr>
+			<th>Description</th>
+			<td><input type="text" name="dis"></td>
+		</tr>
+		<tr>
+			<th>Weight</th>
+			<td><input type="text" name="weight"></td>
+		</tr>
+		<tr>
+			<th>Dimension</th>
+			<td><input type="text" name="dim"></td>
+		</tr>
+		<tr>
+			<th>Sender Name</th>
+			<td><input type="text" name="sname"></td>
+		</tr>
+		<tr>
+			<th>Branch Processed</th>
+			<td><input type="text" name="branch"></td>
+		</tr>
+		<tr>
+			<th>Recepient Name</th>
+			<td><input type="text" name="rname"></td>
+		</tr>
+		<tr>
+			<th>Branch Pickup</th>
+			<td><input type="text" name="pickup"></td>
+		</tr>
+		<tr>
+			<th>Price</th>
+			<td><input type="text" name="price"></td>
+		</tr>
+		<tr>
+			<th>Tracking No</th>
+			<td><input type="text" name="track"></td>
+		</tr>
+		<tr>
+			<th>Date</th>
+			<td><input type="date" name="date"></td>
+		</tr>
+		<th></th>
+		<td><input type="submit" name="Submit" value="submit"></td>
+
+	</table>
+    </form>
+
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'temp/employee.html' %}
+{% block base %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SHIPMENT</title>
+</head>
+<body><center>
+	<table border="2">
+	<h1>SHIPMENT</h1>
+	<tr>
+		<th>Description</th>
+		<th>Weight</th>
+		<th>Dimension</th>
+		<th>Sender Name</th>
+		<th>Branch Processed</th>
+		<th>Recepient Name</th>
+		<th>Branch Pickup</th>
+		<th>Price</th>
+		<th>Tracking No.</th>
+	</tr>
+        {% for i in ss %}
+	<tr>
+		<td>{{ i.courier_description }}</td>
+		<td>{{ i.parcel_weight }}</td>
+		<td>{{ i.parcel_dimension }}</td>
+		<td>{{ i.sender_name }}</td>
+		<td>{{ i.branch_processed }}</td>
+		<td>{{ i.recepient_name }}</td>
+		<td>{{ i.pickup_branch }}</td>
+		<td>{{ i.parcel_price }}</td>
+		<td>{{ i.tracking_no }}</td>
+		<td></td>
+
+	</tr>
+        {% endfor %}
+
+</table>
+
+</body>
+</html>
+{% endblock %}
