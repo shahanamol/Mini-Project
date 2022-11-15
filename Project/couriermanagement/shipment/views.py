@@ -21,15 +21,29 @@ def shipment(request):
 def view(request):
     obj = Shipment.objects.all()
     context = {
-        'aa': obj
+        'abc': obj
     }
-    return render(request,'shipment/admin_view.html',context)
+    return render(request,'shipment/view shipment.html',context)
 def ad(request):
     obj=Shipment.objects.all()
     context={
-        'ss': obj
+        'mmm': obj
     }
-    return render(request,'shipment/view shipment.html',context)
+    return render(request,'shipment/admin_view.html',context)
+
+def search(request):
+    if request.method=="POST":
+        vv=request.POST.get('track')
+        obj = Shipment.objects.filter(tracking_no__istartswith=vv)
+        context = {
+            'objval':obj
+        }
+    else:
+        obj = Shipment.objects.all()
+        context = {
+            'objval': obj
+        }
+    return render(request,'shipment/pubtrack.html',context)
 
 # def updateprofile(request,idd):
 #     obj=Shipment.objects.get()

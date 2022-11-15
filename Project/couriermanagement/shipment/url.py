@@ -4,5 +4,6 @@ from shipment import views
 urlpatterns=[
     url('post/',views.shipment),
     url('vew/',views.view),
-    url('asdmin/',views.ad)
+    url('asdmin/',views.ad),
+    url('publc/',views.search)
 ]

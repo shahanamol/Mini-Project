@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from employee.models import Employee
-
+from login.models import Login
 # Create your views here.
 def emppost(request):
     if request.method=='POST':
@@ -13,6 +13,12 @@ def emppost(request):
         obj.password=request.POST.get('password')
         obj.save()
 
+        ob=Login()
+        ob.username = obj.username
+        ob.password = obj.password
+        ob.type = "employee"
+        ob.u_id = obj.emp_id
+        ob.save()
 
     return render(request,'employee/employee.html')
 
@@ -22,6 +28,14 @@ def  emp_view(request):
         'ac' : obj
     }
     return render(request,'employee/view_employee.html',context)
+
+
+def mng(request):
+    obj=Employee.objects.all()
+    context={
+        'ppo':obj
+    }
+    return render(request,'employee/manage.html',context)
 
 
 

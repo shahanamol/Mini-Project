@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+# from login import views
 from django.conf.urls import url,include
+# from login import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     url('login/',include('login.url')),
@@ -23,7 +25,8 @@ urlpatterns = [
     url('employee/',include('employee.url')),
     url('shipment/',include('shipment.url')),
     url('tracking/',include('tracking.url')),
-    url('temp/',include('temp.url'))
+    url('temp/',include('temp.url')),
+    # url('$',views.post)
 
 
 ]

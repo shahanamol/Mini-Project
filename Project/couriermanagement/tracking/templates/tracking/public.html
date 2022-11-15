@@ -1,13 +1,12 @@
 {% extends 'temp/home.html' %}
 {% block base %}
-
 <!DOCTYPE html>
 <html>
 <head>
 	<title>REGISTRATION</title>
 </head>
 <body>
-	<center><h1>EMPLOYEE REGISTRATION</h1></center>
+	<center><h1>PUBLIC REGISTRATION</h1></center>
 	<form method="post">
 	<table align="center">
         {% csrf_token %}
@@ -16,8 +15,8 @@
 			<td><input type="text" name="name" required=""></td>
 		</tr>
 		<tr>
-		    <th>Branch</th>
-		    <td><input type="text" name="Branch" required=""></td>
+		    <th>Address</th>
+		    <td><input type="text" name="Address" required=""></td>
 	    </tr>
 	    <tr>
 		    <th>Contact No</th>
@@ -27,10 +26,10 @@
 			<th>E-mail</th>
 			<td><input type="mail" name="mail" required=""></td>
 		</tr>
-		<tr>
-			<th>Username</th>
-			<td><input type="text" name="uname" required=""></td>
-		</tr>
+{#		<tr>#}
+{#			<th>Username</th>#}
+{#			<td><input type="text" name="uname"></td>#}
+{#		</tr>#}
 		<tr>
 			<th>Password</th>
 			<td><input type="password" name="password" required=""></td>
@@ -41,8 +40,9 @@
         </tr>
 
 	</table>
-
+    </form>
 </body>
+
 </form>
 </html>
 {% endblock %}

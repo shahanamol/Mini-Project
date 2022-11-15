@@ -1,4 +1,4 @@
-{% extends 'temp/branch.html' %}
+{% extends 'temp/admin.html' %}
 {% block base %}
 <!DOCTYPE html>
 <html>
@@ -20,7 +20,7 @@
 			<th>Status</th>
 {#			<th></th>#}
 		</tr>
-        {% for i in ab %}
+        {% for i in ppo %}
 		<tr>
 			<td>{{ i.name }}</td>
 			<td>{{ i.address }}</td>
@@ -32,8 +32,8 @@
 			<td>{{ i.contact_no }}</td>
 			<td>{{ i.status }}</td>
 {#            <td><a href="{% url 'appr' idd=i.br_id %}">approve</a> </td>#}
-            <td><a href="/branch/aprv/{{ i.br_id }}">approve</a></td>
-			<td><a href="/branch/rjct/{{ i.br_id }}">Reject</a></td>
+{#            <td><a href="/branch/aprv/{{ i.br_id }}">approve</a></td>#}
+{#			<td><a href="/branch/rjct/{{ i.br_id }}">Reject</a></td>#}
 		</tr>
         {% endfor %}
 	</table>

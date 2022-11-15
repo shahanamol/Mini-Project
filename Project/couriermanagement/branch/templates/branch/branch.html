@@ -1,4 +1,4 @@
-{% extends 'temp/branch.html' %}
+{% extends 'temp/home.html' %}
 {% block base %}
 <!DOCTYPE html>
 <html>
@@ -6,48 +6,48 @@
 	<title>REGISTRATION</title>
 </head>
 <body>
-<center><center>BRANCH REGISTRATION</center></h1>
+<center>BRANCH REGISTRATION</center></h1>
 	<form method="post">
         {% csrf_token %}
 	    <table align="center">
 		<tr>
 			<th>Name</th>
-			<td><input type="text" name="name"></td>
+			<td><input type="text" name="name" required=""></td>
 		</tr>
 		<tr>
 			<th>Address</th>
-			<td><textarea  name="address"></textarea></td>
+			<td><textarea  name="address" required=""></textarea></td>
 		</tr>
 			<th>E-mail</th>
-			<td><input type="mail" name="mail"></td>
+			<td><input type="mail" name="mail" required=""></td>
 		</tr>
 		<tr>
 			<th>City</th>
-			<td><input type="text" name="city"></td>
+			<td><input type="text" name="city" required=""></td>
 		</tr>
 		<tr>
 			<th>State</th>
-			<td><input type="text" name="State"></td>
+			<td><input type="text" name="State" required=""></td>
 		</tr>
 		<tr>	
 			<th>Country</th>
-			<td><input type="text" name="Country"></td>
+			<td><input type="text" name="Country" required=""></td>
 		</tr>
 		<tr>	
 			<th>Pincode</th>
-			<td><input type="text" name="Pincode"></td>
+			<td><input type="text" name="Pincode" required=""></td>
 		</tr>
 		<tr>
 		    <th>Contact No</th>
-			<td><input type="phone" name="Contact"></td>
+			<td><input type="phone" name="Contact" required=""></td>
 		</tr>
 		<tr>
 			<th>Username</th>
-			<td><input type="text" name="uname"></td>
+			<td><input type="text" name="uname" required=""></td>
 		</tr>
 		<tr>
 			<th>Password</th>
-			<td><input type="password" name="password"></td>
+			<td><input type="password" name="password" required=""></td>
 		</tr>
             <tr>
                 <td></td>

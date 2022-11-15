@@ -1,4 +1,4 @@
-{% extends 'temp/branch.html' %}
+{% extends 'temp/employee.html' %}
 {% block base %}
 
 <!DOCTYPE html>
@@ -17,15 +17,15 @@
 			<th>Status</th>
 			<th></th>
 		</tr>
-        {% for i in ac %}
+        {% for i in ppo %}
 		<tr>
 			 <td>{{ i.name }}</td>
 			 <td>{{ i.branch }}</td>
 			 <td>{{ i.contact_no }}</td>
 			 <td>{{ i.e_mail }}</td>
 			 <td>{{ i.status }}</td>
-            <td><a href= "/employee/apve/{{ i.emp_id }}">Approve</a></td>
-            <td><a href="/employee/rejt/{{ i.emp_id }}">Reject</a></td>
+{#            <td><a href= "/employee/apve/{{ i.emp_id }}">Approve</a></td>#}
+{#            <td><a href="/employee/rejt/{{ i.emp_id }}">Reject</a></td>#}
 		</tr>
         {% endfor %}
 	</table>

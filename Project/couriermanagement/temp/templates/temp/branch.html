@@ -77,10 +77,12 @@
                     <div class="navbar-nav ml-auto py-0">
                         <a href="/login/pst/" class="nav-item nav-link active">Home</a>
                         <!-- <a href="about.html" class="nav-item nav-link">shipment view</a> -->
-                        <a href="/employee/pst/" class="nav-item nav-link">Add Employee</a>
-                        <a href="/employee/vew/" class="nav-item nav-link">Assign Shipment</a>
-                        <a href="/shipment/post/" class="nav-item nav-link">Shipment Management</a>
-                        <a href="/tracking/pst/" class="nav-item nav-link">Track Shipment</a>
+{#                        <a href="index.html" class="nav-item nav-link">Add Employeee</a>#}
+                        <a href="/employee/vew/#bb" class="nav-item nav-link">manage employee</a>
+                        <a href="/shipment/post/#bb" class="nav-item nav-link">Shipment Management</a>
+{#                        <a href="/tracking/pst/" class="nav-item nav-link">Track Shipment</a>#}
+{#                        <a href="/branch/viw/" class="nav-item nav-link">assign shipment</a>#}
+                        <a href="/login/pst/" class="nav-item nav-link">LogOut</a>
                         <!-- <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Registration</a>
                             <div class="dropdown-menu border-0 rounded-0 m-0">
@@ -110,7 +112,7 @@
                         <div class="p-3" style="max-width: 900px;">
                             <h4 class="text-white text-uppercase mb-md-3">Courier Management</h4>
                             <h1 class="display-3 text-white mb-md-4">Go Courier Management with Live Track</h1>
-                            <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Book Now</a>
+{#                            <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Book Now</a>#}
                         </div>
                     </div>
                 </div>
@@ -236,9 +238,10 @@
         </div>
     </div>
     <!-- Feature End -->
+    <div id="bb">
    {% block base %}
     {% endblock%}
-
+    </div>
 
 
     <!-- Destination Start -->

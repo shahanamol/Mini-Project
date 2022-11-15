@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from branch.models import Branch
+from login.models import Login
 # Create your views here.
 def post(request):
     if request.method=='POST':
@@ -17,6 +18,12 @@ def post(request):
         obj.status='pending'
         obj.save()
 
+        ob=Login()
+        ob.username=obj.username
+        ob.password=obj.password
+        ob.type="branch"
+        ob.u_id=obj.br_id
+        ob.save()
     return render(request,'branch/branch.html')
 
 def bd_view(request):
@@ -25,6 +32,14 @@ def bd_view(request):
         'ab': obj
     }
     return render(request,'branch/view_branch.html',context)
+
+
+def mg_view(request):
+    obj=Branch.objects.all()
+    context= {
+        'ppo':obj
+    }
+    return render(request,'branch/manage.html',context)
 
 
 
